@@ -3,11 +3,15 @@ import "./LoginSignup.css";
 import person from "../Assests/person.png";
 import password from "../Assests/password.png";
 import email from "../Assests/email.png";
+import Message from "../Message/Message";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginSignup = () => {
   const [action, setAction] = useState("Sign Up");
   return (
     <div className="parent">
+      <ToastContainer />
       <div className="container">
         <div className="header">
           <div className="text">{action}</div>
@@ -35,7 +39,9 @@ const LoginSignup = () => {
           <div />
         ) : (
           <div className="forgot-password">
-            <span><input value="test" type="checkbox"/> Remember me</span> 
+            <span>
+              <input value="test" type="checkbox" /> Remember me
+            </span>
             <span>Forgot Password?</span>
           </div>
         )}
@@ -45,6 +51,7 @@ const LoginSignup = () => {
             className={action === "Login" ? "submit gray" : "submit"}
             onClick={() => {
               setAction("Sign Up");
+              toast.warning("Signup failed");
             }}
           >
             Sign Up
@@ -53,6 +60,7 @@ const LoginSignup = () => {
             className={action === "Sign Up" ? "submit gray" : "submit"}
             onClick={() => {
               setAction("Login");
+              toast.error("Login Failed");
             }}
           >
             Login
