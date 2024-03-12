@@ -35,7 +35,8 @@ const LoginSignup = () => {
           <div />
         ) : (
           <div className="forgot-password">
-            Forgot Password?<span>Click here!</span>
+            <span><input value="test" type="checkbox"/> Remember me</span> 
+            <span>Forgot Password?</span>
           </div>
         )}
 
