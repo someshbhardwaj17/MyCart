@@ -1,5 +1,6 @@
 body{
-    background: linear-gradient(#2A00B7,#42006C);
+    /* background: linear-gradient(#2A00B7,#42006C); */
+    background: #fff;
 }
 .parent{
     background: linear-gradient(#2A00B7,#42006C);
@@ -99,6 +100,7 @@ border-radius: 6px;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    border-style: none;
 }
 .gray{
     background: #eaeaea;
